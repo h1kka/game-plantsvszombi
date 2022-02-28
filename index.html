@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.shooter {
+			width: 80px; 
+			position: absolute; 	
+		}
+		.box {
+			background-image: url(game.png);
+			height: 1000px; 
+			background-size: 100% 100%;
+		}
+		.zombies {
+			width: 80px; 
+			position: absolute;
+		}
+	</style>
+</head>
+<body>	
+	
+	<div class="box" style="">
+		
+		<h2 style="position: absolute; left: 800px; top: 50px; color: white;" class="score"></h2>
+
+		<!--ГОРОХИ-->
+	    <img class="shooter b" src="peashooter.png"  style="top: 250px; ">		
+		<img class="shooter b" src="peashooter.png"  style="top: 350px; ">	
+		<img class="shooter b" src="peashooter.png"  style="top: 450px; ">	
+		<img class="shooter b" src="peashooter.png"  style="top: 550px; ">
+		<img class="shooter b" src="peashooter.png"  style="top: 650px; ">
+
+
+		<!--ЗОМБИ-->
+		<img class="zombies a" src="zombie1.png" style="top: 220px">
+		<img class="zombies a" src="zombie2.png" style="top: 320px">
+		<img class="zombies a" src="zombie2.png" style="top: 420px">
+		<img class="zombies a" src="zombie4.png" style="top: 520px">
+		<img class="zombies a" src="zombie4.png" style="top: 620px">
+	</div>
+
+	<div class="da" style="height: 500px; display: none; ">
+		<p style="font-size: 150px;">МОЛОДЕЦ!!!</p>
+	</div>
+<script>
+	let box = document.querySelectorAll('.a');
+	let unbox=document.querySelectorAll('.b')
+	let c=1500;
+	let d=1500;
+	let e=1500;
+	let f=1500;
+	let g=1500;
+	let a=0;
+
+	box[0].style.marginLeft="1500px";
+	box[1].style.marginLeft="1500px";
+	box[2].style.marginLeft="1500px";
+	box[3].style.marginLeft="1500px";
+	box[4].style.marginLeft="1500px";
+
+
+	unbox[0].style.marginLeft="585px";
+	unbox[1].style.marginLeft="585px";
+	unbox[2].style.marginLeft="585px";
+	unbox[3].style.marginLeft="585px";
+	unbox[4].style.marginLeft="585px";
+
+	box[0].onclick = function() {
+		c=c-100
+		box[0].style.marginLeft=c + "px";
+		box[0].style.transition="1s";
+		if (c==600) {
+			alert('ура!! Победа')
+			unbox[0].style.display="none";
+			a=a+1
+			document.querySelector('.score').innerHTML=a;
+			if(a==6){
+					document.querySelector('.da').style.display="block";
+				}
+		}
+	}
+	box[1].onclick = function() {
+		d=d-100
+		box[1].style.marginLeft=d + "px";
+		box[1].style.transition="1s";
+		if (d==600) {
+			alert('ура!! Победа')
+			unbox[1].style.display="none";
+			a=a+1
+			document.querySelector('.score').innerHTML=a;
+			if(a==6){
+					document.querySelector('.da').style.display="block";
+				}
+		}
+	}
+	box[2].onclick = function() {
+		e=e-100
+		box[2].style.marginLeft=e + "px";
+		box[2].style.transition="1s";
+		if (e==600) {
+			alert('ура!! Победа')
+			unbox[2].style.display="none";
+			a=a+1
+			document.querySelector('.score').innerHTML=a;
+			if(a==6){
+					document.querySelector('.da').style.display="block";
+				}
+		}
+	}
+	box[3].onclick = function() {
+		f=f-100
+		box[3].style.marginLeft=f + "px";
+		box[3].style.transition="1s";
+		if (f==600) {
+			alert('ура!! Победа')
+			unbox[3].style.display="none";
+			a=a+1
+			document.querySelector('.score').innerHTML=a;
+			if(a==6){
+					document.querySelector('.da').style.display="block";
+				}
+		}
+	}
+	box[4].onclick = function() {
+		g=g-100
+		box[4].style.marginLeft=g + "px";
+		box[4].style.transition="1s";
+		if (g==600) {
+			alert('ура!! Победа')
+			unbox[4].style.display="none";
+			a=a+1
+			document.querySelector('.score').innerHTML=a;
+			if(a==6){
+					document.querySelector('.da').style.display="block";
+				}
+		}
+	}
+
+
+</script>
+</body>
+</html>
